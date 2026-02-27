@@ -260,7 +260,16 @@ pytest tests/test_server.py -v
 
 ---
 
-## 📁 Estrutura do Projeto
+## � Documentação
+
+| Documento | Conteúdo |
+|---|---|
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Decisões de design, por que Fernet/AES-128, TCP framing, threading vs asyncio, checksum SHA-256 |
+| [MANUAL.md](docs/MANUAL.md) | Guia completo: instalação, uso local, Railway, Docker, comandos, troubleshooting |
+
+---
+
+## �📁 Estrutura do Projeto
 
 ```
 chat-tcp/
