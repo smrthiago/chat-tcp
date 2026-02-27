@@ -17,7 +17,9 @@ class Config:
 
     # ===== SERVIDOR =====
     SERVER_HOST: str = os.getenv("SERVER_HOST", "0.0.0.0")
-    SERVER_PORT: int = int(os.getenv("SERVER_PORT", 5000))
+    # Railway injeta a variável PORT automaticamente.
+    # Prioridade: PORT (Railway) → SERVER_PORT (.env) → 5000 (default)
+    SERVER_PORT: int = int(os.getenv("PORT") or os.getenv("SERVER_PORT", 5000))
     MAX_CLIENTS: int = int(os.getenv("MAX_CLIENTS", 50))
 
     # ===== REDE =====
