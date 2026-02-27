@@ -93,6 +93,26 @@ Fernet (criptografia simétrica) é mais simples de implementar e adequada ao es
 
 ---
 
+## 🌐 Servidor Online (Railway)
+
+O servidor está **publicado e acessível** gratuitamente:
+
+| | |
+|---|---|
+| **Host TCP** | `crossover.proxy.rlwy.net` |
+| **Porta** | `21518` |
+| **Região** | Europe West 4 |
+| **Status** | 🟢 Online |
+
+**Conectar ao servidor público:**
+```bash
+python -m src.client.client --host crossover.proxy.rlwy.net --port 21518
+```
+
+> Deploy automático a cada `git push` para `main` via GitHub Actions → Railway.
+
+---
+
 ## 🚀 Como Usar
 
 ### Pré-requisitos
