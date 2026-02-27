@@ -1,0 +1,39 @@
+FROM python:3.11-slim
+
+LABEL maintainer="Trabalho de Infraestrutura de Redes"
+LABEL description="Servidor TCP Chat em Tempo Real"
+
+WORKDIR /app
+
+# Instala netcat para health check
+RUN apt-get update && apt-get install -y \
+    netcat-traditional \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copia requirements primeiro para aproveitar cache de layers
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copia código fonte
+COPY src/ ./src/
+COPY .env.example .env
+
+# Diretório de logs com permissões adequadas
+RUN mkdir -p logs && chmod 755 logs
+
+# Expõe porta padrão
+EXPOSE 5000
+
+# Health check: verifica se a porta está respondendo
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD nc -z localhost 5000 || exit 1
+
+# Variáveis de ambiente com defaults
+ENV SERVER_HOST=0.0.0.0 \
+    SERVER_PORT=5000 \
+    LOG_LEVEL=INFO \
+    ENABLE_ENCRYPTION=true
+
+# Inicia o servidor como módulo Python
+CMD ["python", "-m", "src.server.server"]
