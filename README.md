@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://docker.com)
-[![CI](https://github.com/SEU-USUARIO/chat-tcp/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU-USUARIO/chat-tcp/actions)
+[![CI](https://github.com/smrthiago/chat-tcp/actions/workflows/ci.yml/badge.svg)](https://github.com/smrthiago/chat-tcp/actions)
 
 Sistema **cliente-servidor de chat em tempo real** desenvolvido do zero com Sockets TCP/IP, criptografia Fernet (AES-128) e infraestrutura containerizada com Docker.
 
