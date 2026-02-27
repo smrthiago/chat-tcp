@@ -263,8 +263,8 @@ chat-tcp/
 ## 👨‍💻 Autor
 
 **[Seu Nome]**
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu Perfil](https://linkedin.com/in/seu-perfil)
+- GitHub: [@smrthiago](https://github.com/smrthiago)
+- LinkedIn: [Thiago Soares](https://linkedin.com/in/thiago-soares-b5b6552b8/)
 
 ---
 
