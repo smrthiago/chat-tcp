@@ -1,4 +1,4 @@
-# 🔌 Chat TCP/IP com Criptografia
+# Chat TCP/IP com Criptografia
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
@@ -11,7 +11,7 @@ Sistema **cliente-servidor de chat em tempo real** desenvolvido do zero com Sock
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 | Feature | Detalhe |
 |---------|---------|
@@ -28,7 +28,7 @@ Sistema **cliente-servidor de chat em tempo real** desenvolvido do zero com Sock
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 ```mermaid
 sequenceDiagram
@@ -95,7 +95,7 @@ Fernet (criptografia simétrica) é mais simples de implementar e adequada ao es
 
 ## 🌐 Servidor Online (Railway)
 
-O servidor está **publicado e acessível** gratuitamente:
+O servidor está **publicado e acessível** gratuitamente até 25/03/2026:
 
 | | |
 |---|---|
@@ -113,7 +113,7 @@ python -m src.client.client --host crossover.proxy.rlwy.net --port 21518
 
 ---
 
-## 🚀 Como Usar
+## Como Usar
 
 ### Pré-requisitos
 
@@ -161,7 +161,7 @@ python -m src.client.client --username Alice
 python -m src.client.client --host meu-servidor.railway.app --port 5000
 ```
 
-### Usando Docker 🐳
+### Usando Docker 
 
 ```bash
 # Build e sobe servidor
@@ -185,7 +185,7 @@ docker-compose run --rm client
 
 ---
 
-## 📡 Protocolo
+## Protocolo
 
 Todas as mensagens seguem o formato JSON com **length-prefix framing** (4 bytes big-endian):
 
@@ -219,7 +219,7 @@ Ver [docs/PROTOCOL.md](docs/PROTOCOL.md) para especificação completa.
 
 ---
 
-## 🔐 Segurança
+## Segurança
 
 - **Algoritmo:** Fernet = AES-128-CBC + HMAC-SHA256 + timestamp
 - **Chaves:** Geradas aleatoriamente (256 bits) por cliente na inicialização
@@ -228,7 +228,7 @@ Ver [docs/PROTOCOL.md](docs/PROTOCOL.md) para especificação completa.
 
 ### Limitações de Segurança
 
-> ⚠️ **Este é um projeto educacional.** As limitações abaixo são conhecidas e documentadas:
+> ⚠️**Este é um projeto educacional.** As limitações abaixo são conhecidas e documentadas:
 >
 > 1. **Troca de chave sem proteção:** A chave Fernet trafega em texto plano na mensagem AUTH. Um atacante com acesso à rede pode interceptar e descriptografar as mensagens. A solução em produção seria TLS/SSL ou um handshake Diffie-Hellman.
 >
@@ -236,7 +236,7 @@ Ver [docs/PROTOCOL.md](docs/PROTOCOL.md) para especificação completa.
 
 ---
 
-## 🧪 Testes
+## Testes
 
 ```bash
 # Todos os testes com coverage
@@ -260,7 +260,7 @@ pytest tests/test_server.py -v
 
 ---
 
-## � Documentação
+## Documentação
 
 | Documento | Conteúdo |
 |---|---|
@@ -269,7 +269,7 @@ pytest tests/test_server.py -v
 
 ---
 
-## �📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 chat-tcp/
@@ -289,9 +289,9 @@ chat-tcp/
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-**[Seu Nome]**
+**Thiago Soares**
 - GitHub: [@smrthiago](https://github.com/smrthiago)
 - LinkedIn: [Thiago Soares](https://linkedin.com/in/thiago-soares-b5b6552b8/)
 
